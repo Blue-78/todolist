@@ -216,6 +216,6 @@ app.get("/about", function (req, res) {
   res.render("aboutme");
 });
 
-app.listen("3000", () => {
+app.listen(process.env.PORT, () => {
   console.log("server started");
 });
