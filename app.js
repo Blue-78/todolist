@@ -12,15 +12,15 @@ const app = express();
 app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
-if(process.env.NODE_ENV==='Production'){
+//if(process.env.NODE_ENV==='Production'){
     
   console.log("prod mode");
     mongoose.connect(`mongodb+srv://testproj:${pwd}@cluster0.gb5y2fq.mongodb.net/todlistdb`);
-}else {
+//}else {
 
-  console.log("dev mode");
-  mongoose.connect("mongodb://0.0.0.0:27017/todlistdb");
-}
+  //console.log("dev mode");
+  //mongoose.connect("mongodb://0.0.0.0:27017/todlistdb");
+//}
 
 
 const listschema = new mongoose.Schema({
